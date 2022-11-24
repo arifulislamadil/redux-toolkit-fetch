@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from '../redux/reduxSlice';
 
 const UserView = () => {
-const users = useSelector(state => state.user);
-console.log(usersList)
+    const users = useSelector(state => state.user);
+   const usersList = users.users;
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(fetchUsers())
